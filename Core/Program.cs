@@ -17,6 +17,7 @@ namespace Core
             Console.WriteLine("telik");
             //////HElio
             //////HElio
+            Console.WriteLine("Hellosha");
         }
     }
 }
