@@ -12,6 +12,7 @@ namespace Core
             Console.WriteLine();
             //Moй коммент Тимон
             Console.WriteLine();
+            Console.WriteLine("Clear");
 
         }
     }
