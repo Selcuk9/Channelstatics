@@ -10,7 +10,7 @@ namespace Core
             Authorization auth = new Authorization();
             auth.ConnectAsync();
             Console.WriteLine();
-
+            //Moй коммент Тимон
 
         }
     }
