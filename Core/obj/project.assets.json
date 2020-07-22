@@ -42,11 +42,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ilyaz\\source\\repos\\TelegramChannelstatics\\Core\\Core.csproj",
+      "projectUniqueName": "C:\\Users\\ilyaz\\source\\repos\\Channelstatics\\Core\\Core.csproj",
       "projectName": "Core",
-      "projectPath": "C:\\Users\\ilyaz\\source\\repos\\TelegramChannelstatics\\Core\\Core.csproj",
+      "projectPath": "C:\\Users\\ilyaz\\source\\repos\\Channelstatics\\Core\\Core.csproj",
       "packagesPath": "C:\\Users\\ilyaz\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ilyaz\\source\\repos\\TelegramChannelstatics\\Core\\obj\\",
+      "outputPath": "C:\\Users\\ilyaz\\source\\repos\\Channelstatics\\Core\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ilyaz\\AppData\\Roaming\\NuGet\\NuGet.Config",

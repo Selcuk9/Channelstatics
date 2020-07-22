@@ -8,9 +8,8 @@ namespace Core
         static void Main(string[] args)
         {
             Authorization auth = new Authorization();
-
-
             auth.ConnectAsync();
+            Console.WriteLine();
 
 
         }

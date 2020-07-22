@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8v6ahWFcZy+2jrcKCoNhudLY0h14uWHO04EvGjv9I3ZRJ9YEIx7V/50MzL6E7fyaqH37U/yUQYyTyVuUi8s8Ng==",
+  "dgSpecHash": "LHK1dGzXmLqDDOSWoH5M7SSISdBPsaPR30nHWAk/PH7u+usyACduYaFex9ZcFXQwwPNVYtCAP/jSUUe6jQ0cyQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ilyaz\\source\\repos\\TelegramChannelstatics\\Core\\Core.csproj",
+  "projectFilePath": "C:\\Users\\ilyaz\\source\\repos\\Channelstatics\\Core\\Core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ilyaz\\.nuget\\packages\\tlsharp\\0.1.0.555\\tlsharp.0.1.0.555.nupkg.sha512"
   ],
