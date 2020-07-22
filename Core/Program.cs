@@ -13,7 +13,10 @@ namespace Core
             //Moй коммент Тимон
             Console.WriteLine();
             Console.WriteLine("Clear");
-
+            ///HElio
+            Console.WriteLine("telik");
+            //////HElio
+            //////HElio
         }
     }
 }
