@@ -13,7 +13,6 @@ namespace Core
             //Moй коммент Тимон
             Console.WriteLine();
             Console.WriteLine("Hellosha");
-
         }
     }
 }
