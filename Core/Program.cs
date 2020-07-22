@@ -11,6 +11,7 @@ namespace Core
             auth.ConnectAsync();
             Console.WriteLine();
             //Moй коммент Тимон
+            Console.WriteLine();
 
         }
     }
