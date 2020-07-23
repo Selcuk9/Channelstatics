@@ -1,7 +1,9 @@
 ﻿using System;
+using System.IO;
 using System.Threading.Tasks;
 using Core.Source.Helpers;
 using TeleSharp.TL;
+using TLSharp.Core;
 
 namespace Channelstatics
 {
@@ -17,6 +19,8 @@ namespace Channelstatics
 
         public async Task<TLUser> ConnectAsync()
         {
+            DeleteAuthSession();
+
             try
             {
                 await GlobalVars.Client.ConnectAsync();
@@ -56,6 +60,17 @@ namespace Channelstatics
             else
             {
                 return new TLUser() { };
+            }
+        }
+
+
+        private void DeleteAuthSession()
+        {
+            var sessionPath = Directory.GetCurrentDirectory() + "\\session.dat";
+
+            if (File.Exists(sessionPath))
+            {
+                File.Delete(sessionPath);
             }
         }
     }

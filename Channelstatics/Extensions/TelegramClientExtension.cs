@@ -16,7 +16,7 @@ namespace Channelstatics.Extensions
         private static TelegramClient client;
         public static async Task<TLChannel> SubscribeAsync(this TelegramClient TLClient ,string channelName)
         {
-            var foundedChannel = await Founder.SearchChannelAsync(channelName);
+            var foundedChannel = await Searcher.SearchChannelAsync(channelName);
             if (foundedChannel != null)
             {
                 bool success = await JoinChannel(foundedChannel);
