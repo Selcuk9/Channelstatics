@@ -117,13 +117,14 @@ namespace Channelstatics.Services
                     break;
                 }
                 offset += countPost;
-                if (msgs.Count >= countPost && (IsAll == false))
-                {
-                    break;
-                }
+               
                 foreach (var post in msgs)
                 {
                     posts.Add(post);
+                }
+                if (msgs.Count >= countPost && (IsAll == false))
+                {
+                    break;
                 }
             }
             return posts;

@@ -14,10 +14,11 @@ namespace Core
         {
             Authorization auth = new Authorization();
             Task.WaitAll(auth.ConnectAsync());
-            var channel = GlobalVars.Client.SubscribeAsync("make_your_style").Result;
 
-            var channelInfo = ChannelMethods.GetAllInfoChannel(GlobalVars.Client, "make_your_style").Result;
-            var channelAllPosts = ChannelMethods.GetAllPosts(GlobalVars.Client, "make_your_style").Result;
+            //var channel = GlobalVars.Client.SubscribeAsync("make_your_style").Result;
+            //var channelInfo = ChannelMethods.GetAllInfoChannel(GlobalVars.Client, "make_your_style").Result;
+            //var channelAllPosts = ChannelMethods.GetAllPosts(GlobalVars.Client, "make_your_style").Result;
+
             var channelPost = ChannelMethods.GetPosts(GlobalVars.Client, "make_your_style",80).Result;
 
 
