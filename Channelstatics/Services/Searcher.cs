@@ -19,15 +19,15 @@ namespace Channelstatics.Services
                 return null;
             }
 
-            var ChanneLlist = (await GlobalVars.Client.SendRequestAsync<TeleSharp.TL.Contacts.TLResolvedPeer>(
+            var ChannelList = (await GlobalVars.Client.SendRequestAsync<TeleSharp.TL.Contacts.TLResolvedPeer>(
               new TeleSharp.TL.Contacts.TLRequestResolveUsername
               {
                   Username = channelName
               }).ConfigureAwait(true)).Chats.ToList();
 
-            if (ChanneLlist.Count > 0)
+            if (ChannelList.Count > 0)
             {
-                var channel = ChanneLlist[0] as TLChannel;
+                var channel = ChannelList[0] as TLChannel;
                 if (channel != null)
                 {
                     return channel;
