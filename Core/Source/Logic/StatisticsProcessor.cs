@@ -70,7 +70,8 @@ namespace Core.Source.Logic
                         {
                             TelegramId = p.Id,
                             ChannelUsername = channel.Username,
-                            ViewCount = p.Views ?? 0
+                            ViewCount = p.Views ?? 0,
+                            ChannelTelegramId = channel.TelegramId,
                         };
                         db.StatisticsPosts.Add(postStat);
 

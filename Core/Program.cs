@@ -17,7 +17,6 @@ namespace Core
             //var channel = GlobalVars.Client.SubscribeAsync("make_your_style").Result;
             //var channelInfo = ChannelMethods.GetAllInfoChannel(GlobalVars.Client, "make_your_style").Result;
             //var channelAllPosts = ChannelMethods.GetAllPosts(GlobalVars.Client, "make_your_style").Result;
-
             //var channelPost = ChannelMethods.GetPosts(GlobalVars.Client, "make_your_style",80).Result;
 
 
@@ -31,6 +30,7 @@ namespace Core
             InitDbForTest();
 
             StatisticsManager manager = new StatisticsManager();
+            //Поменяй параметры как удобно
             manager.Start(120, 5);
         }
 
