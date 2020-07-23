@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Channelstatics.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -15,50 +16,42 @@ namespace Channelstatics.Extensions
         private static TelegramClient client;
         public static async Task<TLChannel> SubscribeAsync(this TelegramClient TLClient ,string channelName)
         {
-            client = TLClient;
-            if (string.IsNullOrEmpty(channelName) || string.IsNullOrWhiteSpace(channelName))
+            var foundedChannel = await Founder.SearchChannelAsync(channelName);
+            if (foundedChannel != null)
             {
-                return null;
+                bool success = await JoinChannel(foundedChannel);
+                if (success)
+                {
+                    return foundedChannel;
+                }
             }
-
-            var ChanneLlist = (await client.SendRequestAsync<TeleSharp.TL.Contacts.TLResolvedPeer>(
-               new TeleSharp.TL.Contacts.TLRequestResolveUsername
-               {
-                   Username = "durov"
-               }).ConfigureAwait(true)).Chats.ToList();
-            var result = await JoinChannel(ChanneLlist);
-
-            return result;
+            return null;
         }
         /// <summary>
         /// Подписываемся на первый канал по списку поиска
         /// </summary>
         /// <param name="channelList">список найденных каналов</param>
         /// <returns></returns>
-        private async static Task<TLChannel> JoinChannel(List<TLAbsChat> channelList)
+        private async static Task<bool> JoinChannel(TLChannel channel)
         {
-            if (channelList.Count > 0)
+            var ChannelInfo = channel;
+            var RequestJoin = new TeleSharp.TL.Channels.TLRequestJoinChannel()
             {
-                var ChannelInfo = channelList[0] as TeleSharp.TL.TLChannel;
-                var RequestJoin = new TeleSharp.TL.Channels.TLRequestJoinChannel()
+                Channel = new TLInputChannel
                 {
-                    Channel = new TLInputChannel
-                    {
-                        ChannelId = ChannelInfo.Id,
-                        AccessHash = (long)ChannelInfo.AccessHash
-                    }
-                };
-                try
-                {
-                    var JoinResponse = await client.SendRequestAsync<TLUpdates>(RequestJoin);
+                    ChannelId = ChannelInfo.Id,
+                    AccessHash = (long)ChannelInfo.AccessHash
                 }
-                catch (Exception)
-                {
-                    return new TLChannel();
-                }
-                return ChannelInfo;
+            };
+            try
+            {
+                var JoinResponse = await client.SendRequestAsync<TLUpdates>(RequestJoin);
             }
-            return null;
+            catch (Exception)
+            {
+                return false;
+            }
+            return true;
         }
     }
 }
