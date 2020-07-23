@@ -8,7 +8,6 @@
     ".NETCoreApp,Version=v3.1": {
       "Channelstatics/1.0.0": {
         "dependencies": {
-          "Core": "1.0.0",
           "TLSharp": "0.1.0.555"
         },
         "runtime": {
@@ -26,14 +25,6 @@
             "fileVersion": "1.0.0.0"
           }
         }
-      },
-      "Core/1.0.0": {
-        "dependencies": {
-          "TLSharp": "0.1.0.555"
-        },
-        "runtime": {
-          "Core.dll": {}
-        }
       }
     }
   },
@@ -49,11 +40,6 @@
       "sha512": "sha512-dGlkwG/LlR8TsCZdG7wea2bWrTlfNOhhTOsS6w319+wc0fZucRaCDFxNS25uVEoS7/6J/S8kTR84ICg+EUPODw==",
       "path": "tlsharp/0.1.0.555",
       "hashPath": "tlsharp.0.1.0.555.nupkg.sha512"
-    },
-    "Core/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
     }
   }
 }

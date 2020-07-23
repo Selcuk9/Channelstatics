@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using Channelstatics;
 using Core.Source.Helpers;
+using Core.Source.ProcessClass;
 
 namespace Core
 {
@@ -12,7 +13,9 @@ namespace Core
 
             Authorization auth = new Authorization();
             Task.WaitAll(auth.ConnectAsync());
-            Debug.InputData("Нажмите для завершения!");
+            
+            ConsoleCommandsProcessor procCommands = new ConsoleCommandsProcessor();
+            procCommands.StartAwait();
         }
     }
 }

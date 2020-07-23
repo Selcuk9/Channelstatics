@@ -8,8 +8,4 @@
     <PackageReference Include="TLSharp" Version="0.1.0.555" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Core\Core.csproj" />
-  </ItemGroup>
-
 </Project>

@@ -24,14 +24,24 @@ namespace Core.Source.Helpers
         public static void Success(string message)
         {
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine($"{DateTime.Now.ToShortTimeString()} [log] : {message}");
+            Console.WriteLine($"{DateTime.Now.ToShortTimeString()} [success] : {message}");
+        }
+
+        /// <summary>
+        /// Вывести сообщение в консоль
+        /// </summary>
+        /// <param name="message"></param>
+        public static void Error(string message)
+        {
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine($"{DateTime.Now.ToShortTimeString()} [error] : {message}");
         }
 
         /// <summary>
         /// Считываем данные из консоли.
         /// </summary>
         /// <returns></returns>
-        public static string InputData(string IntroductionString)
+        public static string InputData(string IntroductionString = null)
         {
             Console.ForegroundColor = ConsoleColor.White;
             if (string.IsNullOrWhiteSpace(IntroductionString))

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -56,6 +57,22 @@ namespace Channelstatics
                return _client;
            }
        }
+
+
+       private static string _connection_string_filepath;
+       public static string CONNECTION_STRING_FILEPATH
+       {
+           get
+           {
+                if (string.IsNullOrEmpty(_connection_string_filepath))
+                {
+                    _connection_string_filepath = Directory.GetCurrentDirectory() + "\\database_connection.txt";
+                }
+
+                return _connection_string_filepath;
+           }
+       }
+
 
     }
 }
