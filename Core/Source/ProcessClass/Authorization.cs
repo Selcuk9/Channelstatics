@@ -2,7 +2,6 @@
 using System.Threading.Tasks;
 using Core.Source.Helpers;
 using TeleSharp.TL;
-using TLSharp.Core;
 
 namespace Channelstatics
 {

@@ -1,0 +1,5 @@
+C:\Users\ilyaz\source\repos\Channelstatics\Channelstatics\bin\Debug\netcoreapp3.1\Channelstatics.deps.json
+C:\Users\ilyaz\source\repos\Channelstatics\Channelstatics\bin\Debug\netcoreapp3.1\Channelstatics.dll
+C:\Users\ilyaz\source\repos\Channelstatics\Channelstatics\obj\Debug\netcoreapp3.1\Channelstatics.csprojAssemblyReference.cache
+C:\Users\ilyaz\source\repos\Channelstatics\Channelstatics\obj\Debug\netcoreapp3.1\Channelstatics.AssemblyInfoInputs.cache
+C:\Users\ilyaz\source\repos\Channelstatics\Channelstatics\obj\Debug\netcoreapp3.1\Channelstatics.AssemblyInfo.cs

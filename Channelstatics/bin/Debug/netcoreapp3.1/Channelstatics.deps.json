@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "Channelstatics/1.0.0": {
+        "runtime": {
+          "Channelstatics.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Channelstatics/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

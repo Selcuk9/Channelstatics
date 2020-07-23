@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using Channelstatics;
 
 namespace Core
@@ -7,6 +8,10 @@ namespace Core
     {
         static void Main(string[] args)
         {
+
+            Authorization auth = new Authorization();
+            Task.WaitAll(auth.ConnectAsync());
+
         }
     }
 }
