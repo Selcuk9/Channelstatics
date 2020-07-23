@@ -25,6 +25,7 @@ namespace Core.Source.ProcessClass
             enable = true;
             Debug.Log("Начинаю считывать команды.");
             Thread t = new Thread(this.Process);
+            t.Priority = ThreadPriority.Lowest;
             t.Start();
         }
 

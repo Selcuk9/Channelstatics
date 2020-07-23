@@ -9,11 +9,12 @@ namespace Core.DataBase.Models
     {
         public long Id { get; set; }
         public string ChannelUsername { get; set; }
-        public long TelegramId;
+        public long ChannelTelegramId { get; set; }
+        public long TelegramId { get; set; }
         public string Title { get; set; }
         public string Content { get; set; }
         public DateTime WriteTime { get; set; }
-        public DateTime EditTime { get; set; }
+        public DateTime? EditTime { get; set; }
         public DateTime CreateTime { get; set; }
         
     }
