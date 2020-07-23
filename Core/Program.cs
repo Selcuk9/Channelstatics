@@ -7,17 +7,6 @@ namespace Core
     {
         static void Main(string[] args)
         {
-            Authorization auth = new Authorization();
-            auth.ConnectAsync();
-            Console.WriteLine();
-            //Moй коммент Тимон
-            Console.WriteLine();
-            Console.WriteLine("Clear");
-            ///HElio
-            Console.WriteLine("telik");
-            //////HElio
-            //////HElio
-            Console.WriteLine("Hellosha");
         }
     }
 }
