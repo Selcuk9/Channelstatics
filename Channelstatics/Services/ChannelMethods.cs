@@ -24,7 +24,7 @@ namespace Channelstatics.Services
         public static async Task<Channel> GetAllInfoChannel(TelegramClient client, string channelName)
         {
             Channel channelInfo = new Channel();
-            TLChannel channel = await Searcher.SearchChannelAsync(channelName);
+            TLChannel channel = await Searcher.SearchChannelAsync(client, channelName);
             var fullChannel = await GetChannelFullAsync(client,channel);
             if (channel != null && fullChannel != null)
             {
@@ -66,14 +66,14 @@ namespace Channelstatics.Services
 
         public static async Task<TLVector<TLAbsMessage>> GetAllPosts(TelegramClient client, string channelName)
         {
-            TLChannel channel = await Searcher.SearchChannelAsync(channelName);
+            TLChannel channel = await Searcher.SearchChannelAsync(client, channelName);
             var allPosts = await CounterPostsAsync(channel, client, true);
             return allPosts;
         }
 
         public static async Task<TLVector<TLAbsMessage>> GetPosts(TelegramClient client, string channelName, int count)
         {
-            TLChannel channel = await Searcher.SearchChannelAsync(channelName);
+            TLChannel channel = await Searcher.SearchChannelAsync(client, channelName);
             int offset = 0;
             TLInputPeerChannel inputPeer = new TLInputPeerChannel()
             { ChannelId = channel.Id, AccessHash = (long)channel.AccessHash };
@@ -113,6 +113,7 @@ namespace Channelstatics.Services
                 offset += 100;
             }
         }
+
         private async static Task<TLVector<TLAbsMessage>> CounterPostsAsync(
             TLChannel channel, 
             TelegramClient client, 
