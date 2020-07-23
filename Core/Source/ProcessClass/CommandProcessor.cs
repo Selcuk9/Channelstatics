@@ -13,7 +13,7 @@ namespace Core.Source.ProcessClass
             "hello",
             "test",
             "add_channel",
-            "remove_channel"
+            "remove_channel",
         };
 
         public bool IsCommand(string commandName)

@@ -9,9 +9,6 @@ namespace Channelstatics
 {
     public class Authorization
     {
-      
-
-      
         public Authorization()
         {
 

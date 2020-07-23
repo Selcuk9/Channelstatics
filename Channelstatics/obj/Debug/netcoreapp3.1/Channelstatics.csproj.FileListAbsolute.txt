@@ -11,3 +11,7 @@ D:\Programming\VisualStudioProjects\TelegramChannelStatistics\MyFork\TelegramCha
 D:\Programming\VisualStudioProjects\TelegramChannelStatistics\MyFork\TelegramChannelstatics\Channelstatics\Channelstatics\Channelstatics\bin\Debug\netcoreapp3.1\Channelstatics.pdb
 D:\Programming\VisualStudioProjects\TelegramChannelStatistics\MyFork\TelegramChannelstatics\Channelstatics\Channelstatics\Channelstatics\obj\Debug\netcoreapp3.1\Channelstatics.dll
 D:\Programming\VisualStudioProjects\TelegramChannelStatistics\MyFork\TelegramChannelstatics\Channelstatics\Channelstatics\Channelstatics\obj\Debug\netcoreapp3.1\Channelstatics.pdb
+C:\Users\ilyaz\source\repos\Channelstatics\Channelstatics\obj\Debug\netcoreapp3.1\Channelstatics.dll
+C:\Users\ilyaz\source\repos\Channelstatics\Channelstatics\obj\Debug\netcoreapp3.1\Channelstatics.pdb
+C:\Users\ilyaz\source\repos\Channelstatics\Channelstatics\bin\Debug\netcoreapp3.1\Channelstatics.pdb
+C:\Users\ilyaz\source\repos\Channelstatics\Channelstatics\obj\Debug\netcoreapp3.1\Channelstatics.csproj.CoreCompileInputs.cache

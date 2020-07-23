@@ -68,11 +68,8 @@ namespace Channelstatics
                 {
                     _connection_string_filepath = Directory.GetCurrentDirectory() + "\\database_connection.txt";
                 }
-
                 return _connection_string_filepath;
            }
        }
-
-
     }
 }

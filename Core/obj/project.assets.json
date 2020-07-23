@@ -5039,31 +5039,27 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "Channelstatics >= 1.0.0",
+      "Microsoft.EntityFrameworkCore.Design >= 3.1.6",
       "Microsoft.EntityFrameworkCore.SqlServer >= 3.1.6",
       "Microsoft.EntityFrameworkCore.Tools >= 3.1.6",
       "TLSharp >= 0.1.0.555"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\timof\\.nuget\\packages\\": {},
-    "D:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\ilyaz\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Programming\\VisualStudioProjects\\TelegramChannelStatistics\\MyFork\\TelegramChannelstatics\\Channelstatics\\Channelstatics\\Core\\Core.csproj",
+      "projectUniqueName": "C:\\Users\\ilyaz\\source\\repos\\Channelstatics\\Core\\Core.csproj",
       "projectName": "Core",
-      "projectPath": "D:\\Programming\\VisualStudioProjects\\TelegramChannelStatistics\\MyFork\\TelegramChannelstatics\\Channelstatics\\Channelstatics\\Core\\Core.csproj",
-      "packagesPath": "C:\\Users\\timof\\.nuget\\packages\\",
-      "outputPath": "D:\\Programming\\VisualStudioProjects\\TelegramChannelStatistics\\MyFork\\TelegramChannelstatics\\Channelstatics\\Channelstatics\\Core\\obj\\",
+      "projectPath": "C:\\Users\\ilyaz\\source\\repos\\Channelstatics\\Core\\Core.csproj",
+      "packagesPath": "C:\\Users\\ilyaz\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ilyaz\\source\\repos\\Channelstatics\\Core\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "D:\\Microsoft\\Xamarin\\NuGet\\"
-      ],
       "configFilePaths": [
-        "C:\\Users\\timof\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\ilyaz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -5075,8 +5071,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "D:\\Programming\\VisualStudioProjects\\TelegramChannelStatistics\\MyFork\\TelegramChannelstatics\\Channelstatics\\Channelstatics\\Channelstatics\\Channelstatics.csproj": {
-              "projectPath": "D:\\Programming\\VisualStudioProjects\\TelegramChannelStatistics\\MyFork\\TelegramChannelstatics\\Channelstatics\\Channelstatics\\Channelstatics\\Channelstatics.csproj"
+            "C:\\Users\\ilyaz\\source\\repos\\Channelstatics\\Channelstatics\\Channelstatics.csproj": {
+              "projectPath": "C:\\Users\\ilyaz\\source\\repos\\Channelstatics\\Channelstatics\\Channelstatics.csproj"
             }
           }
         }
@@ -5090,6 +5086,12 @@
     "frameworks": {
       "netcoreapp3.1": {
         "dependencies": {
+          "Microsoft.EntityFrameworkCore.Design": {
+            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "[3.1.6, )"
+          },
           "Microsoft.EntityFrameworkCore.SqlServer": {
             "target": "Package",
             "version": "[3.1.6, )"
@@ -5120,7 +5122,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
       }
     }
   },
@@ -5129,7 +5131,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'TLSharp 0.1.0.555' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "message": "Пакет \"TLSharp 0.1.0.555\" был восстановлен с помощью \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8\", а не целевой платформы проекта \".NETCoreApp,Version=v3.1\". Этот пакет может быть не полностью совместим с вашим проектом.",
       "libraryId": "TLSharp",
       "targetGraphs": [
         ".NETCoreApp,Version=v3.1"
