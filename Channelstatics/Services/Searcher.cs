@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TeleSharp.TL;
+using TLSharp.Core;
 
 namespace Channelstatics.Services
 {
@@ -12,14 +13,14 @@ namespace Channelstatics.Services
     /// </summary>
     public class Searcher
     {
-        public static async Task<TLChannel> SearchChannelAsync(string channelName)
+        public static async Task<TLChannel> SearchChannelAsync(TelegramClient client, string channelName)
         {
             if (string.IsNullOrEmpty(channelName) || string.IsNullOrWhiteSpace(channelName))
             {
                 return null;
             }
 
-            var ChannelList = (await GlobalVars.Client.SendRequestAsync<TeleSharp.TL.Contacts.TLResolvedPeer>(
+            var ChannelList = (await client.SendRequestAsync<TeleSharp.TL.Contacts.TLResolvedPeer>(
               new TeleSharp.TL.Contacts.TLRequestResolveUsername
               {
                   Username = channelName

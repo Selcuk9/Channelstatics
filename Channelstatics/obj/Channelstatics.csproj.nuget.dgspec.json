@@ -30,72 +30,6 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "projectReferences": {
-              "D:\\Programming\\VisualStudioProjects\\TelegramChannelStatistics\\MyFork\\TelegramChannelstatics\\Channelstatics\\Channelstatics\\Core\\Core.csproj": {
-                "projectPath": "D:\\Programming\\VisualStudioProjects\\TelegramChannelStatistics\\MyFork\\TelegramChannelstatics\\Channelstatics\\Channelstatics\\Core\\Core.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "netcoreapp3.1": {
-          "dependencies": {
-            "TLSharp": {
-              "target": "Package",
-              "version": "[0.1.0.555, )"
-            }
-          },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "D:\\Programming\\VisualStudioProjects\\TelegramChannelStatistics\\MyFork\\TelegramChannelstatics\\Channelstatics\\Channelstatics\\Core\\Core.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "D:\\Programming\\VisualStudioProjects\\TelegramChannelStatistics\\MyFork\\TelegramChannelstatics\\Channelstatics\\Channelstatics\\Core\\Core.csproj",
-        "projectName": "Core",
-        "projectPath": "D:\\Programming\\VisualStudioProjects\\TelegramChannelStatistics\\MyFork\\TelegramChannelstatics\\Channelstatics\\Channelstatics\\Core\\Core.csproj",
-        "packagesPath": "C:\\Users\\timof\\.nuget\\packages\\",
-        "outputPath": "D:\\Programming\\VisualStudioProjects\\TelegramChannelStatistics\\MyFork\\TelegramChannelstatics\\Channelstatics\\Channelstatics\\Core\\obj\\",
-        "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "D:\\Microsoft\\Xamarin\\NuGet\\"
-        ],
-        "configFilePaths": [
-          "C:\\Users\\timof\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "netcoreapp3.1"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "netcoreapp3.1": {
             "projectReferences": {}
           }
         },
@@ -108,16 +42,6 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
-            "Microsoft.EntityFrameworkCore.SqlServer": {
-              "target": "Package",
-              "version": "[3.1.6, )"
-            },
-            "Microsoft.EntityFrameworkCore.Tools": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[3.1.6, )"
-            },
             "TLSharp": {
               "target": "Package",
               "version": "[0.1.0.555, )"

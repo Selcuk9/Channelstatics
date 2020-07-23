@@ -25,37 +25,38 @@ namespace Channelstatics.Services
             this.client = client;
         }
 
-        // Получаем основную информацию о канале
-        public async Task<Channel> GetAllInfoChannel(string channelName)
-        {
-            Channel channelInfo = new Channel();
-            TLChannel channel = await Searcher.SearchChannelAsync(channelName);
-            if (channel != null)
-            {
-                channelInfo.IdChannel = channel.Id;
-                channelInfo.ChannelName = channel.Username;
-                channelInfo.Title = channel.Title;
+        //// Получаем основную информацию о канале
+        //public async Task<Channel> GetAllInfoChannel(string channelName)
+        //{
+        //    Channel channelInfo = new Channel();
+        //    TLChannel channel = await Searcher.SearchChannelAsync(channelName);
+        //    if (channel != null)
+        //    {
+        //        channelInfo.IdChannel = channel.Id;
+        //        channelInfo.ChannelName = channel.Username;
+        //        channelInfo.Title = channel.Title;
                 
-            }
-        }
+        //    }
+        //}
 
-        private async TLChatFull GetChannelFull(TLChannel channel)
-        {
-            try
-            {
-                var chan = await client.SendRequestAsync<TeleSharp.TL.Messages.TLChatFull>(new TLRequestGetFullChannel()
-                {
-                    Channel = new TLInputChannel()
-                    { ChannelId = channel.Id, AccessHash = (long)channel.AccessHash }
-                });
-                return chan;
-            }
-            catch (Exception)
-            {
-                throw new Exception("Не удачно получили все данные канала");
-            }
+        //private async TLChatFull GetChannelFull(TLChannel channel)
+        //{
+        //    try
+        //    {
+        //        var chan = await client.SendRequestAsync<TeleSharp.TL.Messages.TLChatFull>(new TLRequestGetFullChannel()
+        //        {
+        //            Channel = new TLInputChannel()
+        //            { ChannelId = channel.Id, AccessHash = (long)channel.AccessHash }
+        //        });
+        //        return chan;
+        //    }
+        //    catch (Exception)
+        //    {
+        //        throw new Exception("Не удачно получили все данные канала");
+        //    }
            
-        }
+        //}
+
         public async Task<TLChannel> SubscribeChannel(string channelName)
         {
             if (channelName != null && channelName != "")

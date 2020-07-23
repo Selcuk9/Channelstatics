@@ -1291,6 +1291,19 @@
           "lib/net46/TLSharp.Core.dll": {},
           "lib/net46/TeleSharp.TL.dll": {}
         }
+      },
+      "Channelstatics/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "TLSharp": "0.1.0.555"
+        },
+        "compile": {
+          "bin/placeholder/Channelstatics.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Channelstatics.dll": {}
+        }
       }
     }
   },
@@ -5016,10 +5029,16 @@
         "tlsharp.0.1.0.555.nupkg.sha512",
         "tlsharp.nuspec"
       ]
+    },
+    "Channelstatics/1.0.0": {
+      "type": "project",
+      "path": "../Channelstatics/Channelstatics.csproj",
+      "msbuildProject": "../Channelstatics/Channelstatics.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "Channelstatics >= 1.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 3.1.6",
       "Microsoft.EntityFrameworkCore.Tools >= 3.1.6",
       "TLSharp >= 0.1.0.555"
@@ -5055,7 +5074,11 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\Programming\\VisualStudioProjects\\TelegramChannelStatistics\\MyFork\\TelegramChannelstatics\\Channelstatics\\Channelstatics\\Channelstatics\\Channelstatics.csproj": {
+              "projectPath": "D:\\Programming\\VisualStudioProjects\\TelegramChannelStatistics\\MyFork\\TelegramChannelstatics\\Channelstatics\\Channelstatics\\Channelstatics\\Channelstatics.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

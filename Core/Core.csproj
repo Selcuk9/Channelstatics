@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="DataBase\" />
+    <ProjectReference Include="..\Channelstatics\Channelstatics.csproj" />
   </ItemGroup>
 
 </Project>

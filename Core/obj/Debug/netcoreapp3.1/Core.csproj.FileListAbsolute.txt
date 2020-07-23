@@ -61,3 +61,6 @@ D:\Programming\VisualStudioProjects\TelegramChannelStatistics\MyFork\TelegramCha
 D:\Programming\VisualStudioProjects\TelegramChannelStatistics\MyFork\TelegramChannelstatics\Channelstatics\Channelstatics\Core\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 D:\Programming\VisualStudioProjects\TelegramChannelStatistics\MyFork\TelegramChannelstatics\Channelstatics\Channelstatics\Core\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 D:\Programming\VisualStudioProjects\TelegramChannelStatistics\MyFork\TelegramChannelstatics\Channelstatics\Channelstatics\Core\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\Programming\VisualStudioProjects\TelegramChannelStatistics\MyFork\TelegramChannelstatics\Channelstatics\Channelstatics\Core\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+D:\Programming\VisualStudioProjects\TelegramChannelStatistics\MyFork\TelegramChannelstatics\Channelstatics\Channelstatics\Core\bin\Debug\netcoreapp3.1\Channelstatics.dll
+D:\Programming\VisualStudioProjects\TelegramChannelStatistics\MyFork\TelegramChannelstatics\Channelstatics\Channelstatics\Core\bin\Debug\netcoreapp3.1\Channelstatics.pdb

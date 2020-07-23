@@ -13,13 +13,12 @@ namespace Channelstatics.Extensions
     /// </summary>
     public static class TelegramClientExtension
     {
-        private static TelegramClient client;
         public static async Task<TLChannel> SubscribeAsync(this TelegramClient TLClient ,string channelName)
         {
-            var foundedChannel = await Searcher.SearchChannelAsync(channelName);
+            var foundedChannel = await Searcher.SearchChannelAsync(TLClient, channelName);
             if (foundedChannel != null)
             {
-                bool success = await JoinChannel(foundedChannel);
+                bool success = await JoinChannel(TLClient, foundedChannel);
                 if (success)
                 {
                     return foundedChannel;
@@ -32,7 +31,7 @@ namespace Channelstatics.Extensions
         /// </summary>
         /// <param name="channelList">список найденных каналов</param>
         /// <returns></returns>
-        private async static Task<bool> JoinChannel(TLChannel channel)
+        private async static Task<bool> JoinChannel(this TelegramClient client, TLChannel channel)
         {
             var ChannelInfo = channel;
             var RequestJoin = new TeleSharp.TL.Channels.TLRequestJoinChannel()
