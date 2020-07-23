@@ -15,12 +15,12 @@ namespace Channelstatics.Services
     /// <summary>
     /// 
     /// </summary>
-    public class Group
+    public class ChannelMethods
     {
         //public Channel ChannelInfo { get; private set; }
         private readonly TelegramClient client;
 
-        public Group(TelegramClient client)
+        public ChannelMethods(TelegramClient client)
         {
             this.client = client;
         }
@@ -29,17 +29,16 @@ namespace Channelstatics.Services
         public async Task<Channel> GetAllInfoChannel(string channelName)
         {
             Channel channelInfo = new Channel();
-            TLChannel channel = await Founder.SearchChannelAsync(channelName);
+            TLChannel channel = await Searcher.SearchChannelAsync(channelName);
             if (channel != null)
             {
                 channelInfo.IdChannel = channel.Id;
                 channelInfo.ChannelName = channel.Username;
                 channelInfo.Title = channel.Title;
                 
-
-
             }
         }
+
         private async TLChatFull GetChannelFull(TLChannel channel)
         {
             try

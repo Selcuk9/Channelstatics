@@ -9,4 +9,8 @@
     <PackageReference Include="TLSharp" Version="0.1.0.555" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="DataBase\" />
+  </ItemGroup>
+
 </Project>

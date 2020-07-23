@@ -3,3 +3,12 @@ C:\Users\ilyaz\source\repos\Channelstatics\Channelstatics\bin\Debug\netcoreapp3.
 C:\Users\ilyaz\source\repos\Channelstatics\Channelstatics\obj\Debug\netcoreapp3.1\Channelstatics.csprojAssemblyReference.cache
 C:\Users\ilyaz\source\repos\Channelstatics\Channelstatics\obj\Debug\netcoreapp3.1\Channelstatics.AssemblyInfoInputs.cache
 C:\Users\ilyaz\source\repos\Channelstatics\Channelstatics\obj\Debug\netcoreapp3.1\Channelstatics.AssemblyInfo.cs
+D:\Programming\VisualStudioProjects\TelegramChannelStatistics\MyFork\TelegramChannelstatics\Channelstatics\Channelstatics\Channelstatics\bin\Debug\netcoreapp3.1\Core.exe
+D:\Programming\VisualStudioProjects\TelegramChannelStatistics\MyFork\TelegramChannelstatics\Channelstatics\Channelstatics\Channelstatics\bin\Debug\netcoreapp3.1\Channelstatics.deps.json
+D:\Programming\VisualStudioProjects\TelegramChannelStatistics\MyFork\TelegramChannelstatics\Channelstatics\Channelstatics\Channelstatics\bin\Debug\netcoreapp3.1\Channelstatics.dll
+D:\Programming\VisualStudioProjects\TelegramChannelStatistics\MyFork\TelegramChannelstatics\Channelstatics\Channelstatics\Channelstatics\bin\Debug\netcoreapp3.1\Core.dll
+D:\Programming\VisualStudioProjects\TelegramChannelStatistics\MyFork\TelegramChannelstatics\Channelstatics\Channelstatics\Channelstatics\bin\Debug\netcoreapp3.1\Core.pdb
+D:\Programming\VisualStudioProjects\TelegramChannelStatistics\MyFork\TelegramChannelstatics\Channelstatics\Channelstatics\Channelstatics\obj\Debug\netcoreapp3.1\Channelstatics.csprojAssemblyReference.cache
+D:\Programming\VisualStudioProjects\TelegramChannelStatistics\MyFork\TelegramChannelstatics\Channelstatics\Channelstatics\Channelstatics\obj\Debug\netcoreapp3.1\Channelstatics.AssemblyInfoInputs.cache
+D:\Programming\VisualStudioProjects\TelegramChannelStatistics\MyFork\TelegramChannelstatics\Channelstatics\Channelstatics\Channelstatics\obj\Debug\netcoreapp3.1\Channelstatics.AssemblyInfo.cs
+D:\Programming\VisualStudioProjects\TelegramChannelStatistics\MyFork\TelegramChannelstatics\Channelstatics\Channelstatics\Channelstatics\obj\Debug\netcoreapp3.1\Channelstatics.csproj.CopyComplete
