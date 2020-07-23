@@ -10,7 +10,7 @@ namespace Channelstatics.Models
     {
         public string ChannelName { get; set; }
         public string Title { get; set; }
-        public long Subscribers { get; set; }
+        public int? Subscribers { get; set; }
         public string Link { get; set; }
         public string Description { get; set; }
         public string CountPost { get; set; }
