@@ -10,10 +10,6 @@ C:\Users\ilyaz\source\repos\Channelstatics\Core\bin\Debug\netcoreapp3.1\Core.pdb
 C:\Users\ilyaz\source\repos\Channelstatics\Core\obj\Debug\netcoreapp3.1\Core.dll
 C:\Users\ilyaz\source\repos\Channelstatics\Core\obj\Debug\netcoreapp3.1\Core.pdb
 C:\Users\ilyaz\source\repos\Channelstatics\Core\obj\Debug\netcoreapp3.1\Core.genruntimeconfig.cache
-C:\Users\ilyaz\source\repos\Channelstatics\Core\bin\Debug\netcoreapp3.1\TLSharp.Core.dll
-C:\Users\ilyaz\source\repos\Channelstatics\Core\bin\Debug\netcoreapp3.1\TeleSharp.TL.dll
-C:\Users\ilyaz\source\repos\Channelstatics\Core\obj\Debug\netcoreapp3.1\Core.csproj.CoreCompileInputs.cache
-C:\Users\ilyaz\source\repos\Channelstatics\Core\obj\Debug\netcoreapp3.1\Core.csproj.CopyComplete
 D:\Programming\VisualStudioProjects\TelegramChannelStatistics\MyFork\TelegramChannelstatics\Channelstatics\Channelstatics\Core\bin\Debug\netcoreapp3.1\Core.exe
 D:\Programming\VisualStudioProjects\TelegramChannelStatistics\MyFork\TelegramChannelstatics\Channelstatics\Channelstatics\Core\bin\Debug\netcoreapp3.1\Core.deps.json
 D:\Programming\VisualStudioProjects\TelegramChannelStatistics\MyFork\TelegramChannelstatics\Channelstatics\Channelstatics\Core\bin\Debug\netcoreapp3.1\Core.runtimeconfig.json
@@ -28,3 +24,7 @@ D:\Programming\VisualStudioProjects\TelegramChannelStatistics\MyFork\TelegramCha
 D:\Programming\VisualStudioProjects\TelegramChannelStatistics\MyFork\TelegramChannelstatics\Channelstatics\Channelstatics\Core\obj\Debug\netcoreapp3.1\Core.csproj.CopyComplete
 D:\Programming\VisualStudioProjects\TelegramChannelStatistics\MyFork\TelegramChannelstatics\Channelstatics\Channelstatics\Core\obj\Debug\netcoreapp3.1\Core.dll
 D:\Programming\VisualStudioProjects\TelegramChannelStatistics\MyFork\TelegramChannelstatics\Channelstatics\Channelstatics\Core\obj\Debug\netcoreapp3.1\Core.pdb
+C:\Users\ilyaz\source\repos\Channelstatics\Core\bin\Debug\netcoreapp3.1\TLSharp.Core.dll
+C:\Users\ilyaz\source\repos\Channelstatics\Core\bin\Debug\netcoreapp3.1\TeleSharp.TL.dll
+C:\Users\ilyaz\source\repos\Channelstatics\Core\obj\Debug\netcoreapp3.1\Core.csproj.CoreCompileInputs.cache
+C:\Users\ilyaz\source\repos\Channelstatics\Core\obj\Debug\netcoreapp3.1\Core.csproj.CopyComplete

@@ -1,25 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Programming\\VisualStudioProjects\\TelegramChannelStatistics\\MyFork\\TelegramChannelstatics\\Channelstatics\\Channelstatics\\Channelstatics\\Channelstatics.csproj": {}
+    "C:\\Users\\ilyaz\\source\\repos\\Channelstatics\\Channelstatics\\Channelstatics.csproj": {}
   },
   "projects": {
-    "D:\\Programming\\VisualStudioProjects\\TelegramChannelStatistics\\MyFork\\TelegramChannelstatics\\Channelstatics\\Channelstatics\\Channelstatics\\Channelstatics.csproj": {
+    "C:\\Users\\ilyaz\\source\\repos\\Channelstatics\\Channelstatics\\Channelstatics.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Programming\\VisualStudioProjects\\TelegramChannelStatistics\\MyFork\\TelegramChannelstatics\\Channelstatics\\Channelstatics\\Channelstatics\\Channelstatics.csproj",
+        "projectUniqueName": "C:\\Users\\ilyaz\\source\\repos\\Channelstatics\\Channelstatics\\Channelstatics.csproj",
         "projectName": "Channelstatics",
-        "projectPath": "D:\\Programming\\VisualStudioProjects\\TelegramChannelStatistics\\MyFork\\TelegramChannelstatics\\Channelstatics\\Channelstatics\\Channelstatics\\Channelstatics.csproj",
-        "packagesPath": "C:\\Users\\timof\\.nuget\\packages\\",
-        "outputPath": "D:\\Programming\\VisualStudioProjects\\TelegramChannelStatistics\\MyFork\\TelegramChannelstatics\\Channelstatics\\Channelstatics\\Channelstatics\\obj\\",
+        "projectPath": "C:\\Users\\ilyaz\\source\\repos\\Channelstatics\\Channelstatics\\Channelstatics.csproj",
+        "packagesPath": "C:\\Users\\ilyaz\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ilyaz\\source\\repos\\Channelstatics\\Channelstatics\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "D:\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\timof\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\ilyaz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -31,8 +27,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "D:\\Programming\\VisualStudioProjects\\TelegramChannelStatistics\\MyFork\\TelegramChannelstatics\\Channelstatics\\Channelstatics\\Core\\Core.csproj": {
-                "projectPath": "D:\\Programming\\VisualStudioProjects\\TelegramChannelStatistics\\MyFork\\TelegramChannelstatics\\Channelstatics\\Channelstatics\\Core\\Core.csproj"
+              "C:\\Users\\ilyaz\\source\\repos\\Channelstatics\\Core\\Core.csproj": {
+                "projectPath": "C:\\Users\\ilyaz\\source\\repos\\Channelstatics\\Core\\Core.csproj"
               }
             }
           }
@@ -66,26 +62,22 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Programming\\VisualStudioProjects\\TelegramChannelStatistics\\MyFork\\TelegramChannelstatics\\Channelstatics\\Channelstatics\\Core\\Core.csproj": {
+    "C:\\Users\\ilyaz\\source\\repos\\Channelstatics\\Core\\Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Programming\\VisualStudioProjects\\TelegramChannelStatistics\\MyFork\\TelegramChannelstatics\\Channelstatics\\Channelstatics\\Core\\Core.csproj",
+        "projectUniqueName": "C:\\Users\\ilyaz\\source\\repos\\Channelstatics\\Core\\Core.csproj",
         "projectName": "Core",
-        "projectPath": "D:\\Programming\\VisualStudioProjects\\TelegramChannelStatistics\\MyFork\\TelegramChannelstatics\\Channelstatics\\Channelstatics\\Core\\Core.csproj",
-        "packagesPath": "C:\\Users\\timof\\.nuget\\packages\\",
-        "outputPath": "D:\\Programming\\VisualStudioProjects\\TelegramChannelStatistics\\MyFork\\TelegramChannelstatics\\Channelstatics\\Channelstatics\\Core\\obj\\",
+        "projectPath": "C:\\Users\\ilyaz\\source\\repos\\Channelstatics\\Core\\Core.csproj",
+        "packagesPath": "C:\\Users\\ilyaz\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ilyaz\\source\\repos\\Channelstatics\\Core\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "D:\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\timof\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\ilyaz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -128,7 +120,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
         }
       }
     }

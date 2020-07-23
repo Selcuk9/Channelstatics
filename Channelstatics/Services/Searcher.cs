@@ -10,7 +10,7 @@ namespace Channelstatics.Services
     /// <summary>
     /// Поисковик телеграм
     /// </summary>
-    public class Founder
+    public class Searcher
     {
         public static async Task<TLChannel> SearchChannelAsync(string channelName)
         {
