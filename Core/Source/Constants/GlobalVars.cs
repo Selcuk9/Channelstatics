@@ -4,8 +4,8 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TeleSharp.TL;
 using TLSharp.Core;
+
 
 namespace Channelstatics
 {
@@ -35,7 +35,7 @@ namespace Channelstatics
        /// <summary>
        /// Номер телефона клиента
        /// </summary>
-       private static string _phoneNumber = "+79034432642";
+       private static string _phoneNumber = "+79888642460";
        public static string PhoneNumber
        {
            get { return _phoneNumber; }
@@ -71,5 +71,10 @@ namespace Channelstatics
                 return _connection_string_filepath;
            }
        }
+
+
+
+
+
     }
 }
