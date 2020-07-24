@@ -19,6 +19,11 @@ namespace Core.Source.Logic
             proc = new StatisticsProcessor();
         }
 
+        /// <summary>
+        /// Начать сбор статистики
+        /// </summary>
+        /// <param name="statisticsDelaySeconds">Задержка сбора статистики</param>
+        /// <param name="delayBetweenChanelSeconds">задержка между запросами для каждого канала (чтобы телега не банила запросы по превышению лимита)</param>
         public void Start(int statisticsDelaySeconds = 3600, int delayBetweenChanelSeconds = 5)
         {
             this.timer = new System.Threading.Timer((e) =>
