@@ -52,6 +52,7 @@ namespace Core.Source.Logic
 
                     db.StatisticsChannels.Add(chanStat);
 
+
                     //Взять все посты у канала, через запрос.
                     var posts = ChannelMethods.GetAllPosts(GlobalVars.Client, channel.Username).Result;
                     foreach (var post in posts)
