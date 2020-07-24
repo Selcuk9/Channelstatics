@@ -40,6 +40,8 @@ namespace Core.Source.Logic
                     Debug.Error("Нет каналов в базе для сбора статистики!");
                     return;
                 }
+
+                Thread.Sleep(this.RequestsDelaySeconds);
                 
                 //Запускаем цикл по каналам
                 //Получить запросом канал Добавить в базу кол-во подписчиков канала на текущий час.
