@@ -27,7 +27,7 @@ namespace Core
             procCommands.StartAwait();
 
             //Этот метод нужно запустить один раз для инициализации базы данных, потом нужно закомментировать
-            InitDbForTest();
+            //InitDbForTest();
 
             StatisticsManager manager = new StatisticsManager();
             //Поменяй параметры как удобно
@@ -45,11 +45,11 @@ namespace Core
 
             using (Db db = new Db(HelperDatabase.DB_OPTIONS))
             {
-                DbMethods.AddChannelIfNeed(db, c1);
-                DbMethods.AddChannelIfNeed(db, c2);
-                DbMethods.AddChannelIfNeed(db, c3);
-                DbMethods.AddChannelIfNeed(db, c4);
-                DbMethods.AddChannelIfNeed(db, c5);
+                DbMethods.AddTelegramChannelIfNeed(db, c1);
+                DbMethods.AddTelegramChannelIfNeed(db, c2);
+                DbMethods.AddTelegramChannelIfNeed(db, c3);
+                DbMethods.AddTelegramChannelIfNeed(db, c4);
+                DbMethods.AddTelegramChannelIfNeed(db, c5);
 
                 var channels = DbMethods.GetAllChannels(db);
                 foreach (var c in channels)

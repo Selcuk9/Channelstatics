@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading;
 using Core.Source.Helpers;
+using Core.Source.Logic;
 
 namespace Core.Source.Logic
 {
@@ -11,12 +12,36 @@ namespace Core.Source.Logic
     /// </summary>
     public class StatisticsManager
     {
-        private StatisticsProcessor proc;
+        public StatisticsProcessor StatisticsProcessor;
         private System.Threading.Timer timer;
+
+        public int _statisticsDelaySeconds = 3600;
+        public int StatisticsDelaySeconds
+        {
+            get { return this._statisticsDelaySeconds; }
+            set
+            {
+                this._statisticsDelaySeconds = value;
+                if(Equals(this.timer, null) == false)
+                {
+                    this.timer.Change(TimeSpan.Zero, TimeSpan.FromSeconds(this._statisticsDelaySeconds));
+                }
+            }
+        }
+
+        public int RequestsDelaySeconds
+        {
+            get
+            {
+                return this.StatisticsProcessor.RequestsDelaySeconds;
+            }
+            set { this.StatisticsProcessor.RequestsDelaySeconds = value; }
+        }
+    
 
         public StatisticsManager()
         {
-            proc = new StatisticsProcessor();
+            StatisticsProcessor = new StatisticsProcessor();
         }
 
         /// <summary>
@@ -24,12 +49,15 @@ namespace Core.Source.Logic
         /// </summary>
         /// <param name="statisticsDelaySeconds">Задержка сбора статистики</param>
         /// <param name="delayBetweenChanelSeconds">задержка между запросами для каждого канала (чтобы телега не банила запросы по превышению лимита)</param>
-        public void Start(int statisticsDelaySeconds = 3600, int delayBetweenChanelSeconds = 5)
+        public void Start(int statisticsDelaySeconds = 3600, int requestsDelaySeconds = 5)
         {
+            this.StatisticsDelaySeconds = statisticsDelaySeconds;
+            this.RequestsDelaySeconds = requestsDelaySeconds;
+
             this.timer = new System.Threading.Timer((e) =>
             {
-                StartStatistics(delayBetweenChanelSeconds);
-            }, null, TimeSpan.Zero, TimeSpan.FromSeconds(statisticsDelaySeconds));
+                StartStatisticsProcessor(this.RequestsDelaySeconds);
+            }, null, TimeSpan.Zero, TimeSpan.FromSeconds(this.StatisticsDelaySeconds));
         }
 
         public void Stop()
@@ -38,11 +66,11 @@ namespace Core.Source.Logic
             this.timer.Dispose();
         }
 
-        private void StartStatistics(int delayBetweenChanelSecond)
+        private void StartStatisticsProcessor(int delayBetweenChanelSecond)
         {
             Debug.Log("Запускаем сбор статистики");
 
-            Thread th = new Thread(new ParameterizedThreadStart(proc.Process));
+            Thread th = new Thread(new ParameterizedThreadStart(StatisticsProcessor.Process));
             th.Priority = ThreadPriority.Highest;
             th.Name = "StatisticsThread";
             th.Start(delayBetweenChanelSecond);

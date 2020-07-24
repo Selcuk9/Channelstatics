@@ -16,12 +16,18 @@ namespace Core.Source.Logic
     /// </summary>
     public class StatisticsProcessor
     {
+    
+        /// <summary>
+        /// Задержка между запросами, чтобы не превышать лимит запросов.
+        /// </summary>
+        public int RequestsDelaySeconds = 5;
+
         /// <summary>
         /// Запускаем ежечасно, желательно в отдельном потоке, поставить приоритет потока на высокий, а потом выполнять параллельно.
         /// </summary>
         public void Process(object intChannelDelaySeconds)
         {
-            int channelDelaySeconds = (int) intChannelDelaySeconds;
+            this.RequestsDelaySeconds = (int) intChannelDelaySeconds;
 
 
             using (Db db = new Db(HelperDatabase.DB_OPTIONS))
@@ -43,14 +49,7 @@ namespace Core.Source.Logic
                     Debug.Log($"Берем статистику канала [{channel.Username}]");
 
                     var channelInfo = ChannelMethods.GetAllInfoChannel(GlobalVars.Client, channel.Username).Result;
-                    StatisticsChannel chanStat = new StatisticsChannel()
-                    {
-                        TelegramId = channelInfo.IdChannel,
-                        SubscribersCount = channelInfo.Subscribers ?? 0,
-                        Username = channelInfo.ChannelName,
-                    };
-
-                    db.StatisticsChannels.Add(chanStat);
+                    DbMethods.AddStatisticsChannelToDb(db, channelInfo);
 
 
                     //Взять все посты у канала, через запрос.
@@ -66,24 +65,15 @@ namespace Core.Source.Logic
 
                         //Если пост новый и еще не добавлен в базу, то добавить в базу.
                         TelegramPost telePost = DbMethods.AddTelegramPostIfNeed(db, channel, p);
-
-                        StatisticsPost postStat = new StatisticsPost()
-                        {
-                            TelegramId = p.Id,
-                            ChannelUsername = channel.Username,
-                            ViewCount = p.Views ?? 0,
-                            ChannelTelegramId = channel.TelegramId,
-                        };
-                        db.StatisticsPosts.Add(postStat);
-
+                        DbMethods.AddStatisticsPostToDb(db, channel, p);
                     }
 
-                    db.SaveChanges();
-                    Thread.Sleep(channelDelaySeconds * 1000);
+                    //Делаем задержку по времени, чтобы не банили запросы за превыщение лимита
+                    //Берем данные по каналу, по его постам и делаем задержку.
+                    Thread.Sleep(this.RequestsDelaySeconds * 1000);
                 }
 
                 Debug.Log("Сбор статистики завершен!");
-                db.SaveChanges();
 
             }
 

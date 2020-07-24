@@ -13,24 +13,44 @@ namespace Core.Source.Helpers
 {
     public class DbMethods
     {
+        /// <summary>
+        /// Получить все каналы из таблицы TelegramChannels
+        /// </summary>
+        /// <param name="db"></param>
+        /// <returns></returns>
         public static List<TelegramChannel> GetAllChannels(Db db)
         {
             return db.TelegramChannels.ToList();
         }
 
+
+        /// <summary>
+        /// Добавить сущность TelegramPost (Проверка на наличие в базе)
+        /// </summary>
+        /// <param name="db"></param>
+        /// <param name="channel"></param>
+        /// <param name="post"></param>
+        /// <returns></returns>
         public static TelegramPost AddTelegramPostIfNeed(Db db, TelegramChannel channel, TLMessage post)
         {
-            var p = GetPostByTelegramId(db, channel.TelegramId, post.Id);
+            var p = GetTelegramPostByTelegramId(db, channel.TelegramId, post.Id);
 
             if (Equals(p, null))
             {
-                return AddPostToDb(db, channel, post);
+                return AddTelegramPostToDb(db, channel, post);
             }
 
             return p;
         }
 
-        public static TelegramPost AddPostToDb(Db db, TelegramChannel channel, TLMessage post)
+        /// <summary>
+        /// Добавить сущность TelegramPost в базу без проверки на наличие.
+        /// </summary>
+        /// <param name="db"></param>
+        /// <param name="channel"></param>
+        /// <param name="post"></param>
+        /// <returns></returns>
+        public static TelegramPost AddTelegramPostToDb(Db db, TelegramChannel channel, TLMessage post)
         {
             //Добавить в базу сущность TelegramPost
             TelegramPost newPost = new TelegramPost()
@@ -39,16 +59,17 @@ namespace Core.Source.Helpers
                 ChannelUsername = channel.Username,
                 TelegramId = post.Id,
                 WriteTime =  Const.StartDate.AddSeconds(post.Date),
+                
                 Content = post.Message ?? (post?.Media as TLMessageMediaPhoto)?.Caption ?? null,
             };
 
-            if (post?.EditDate == null)
+            if (post?.EditDate != null)
             {
-                newPost.EditTime = Const.StartDate.AddSeconds(post.Date);
+                newPost.EditTime = Const.StartDate.AddSeconds((long)post.EditDate);
             }
             else
             {
-                newPost.EditTime = Const.StartDate.AddSeconds((long)post.EditDate);
+                newPost.EditTime = Const.StartDate.AddSeconds((long)post.Date);
             }
 
             db.TelegramPosts.Add(newPost);
@@ -56,26 +77,46 @@ namespace Core.Source.Helpers
             return newPost;
         }
 
-        public static TelegramPost GetPostByTelegramId(Db db, long channelId, long telegramId)
+        /// <summary>
+        /// Получить сущность TelegramPost по TelegramId
+        /// </summary>
+        /// <param name="db"></param>
+        /// <param name="channelId"></param>
+        /// <param name="telegramId"></param>
+        /// <returns></returns>
+        public static TelegramPost GetTelegramPostByTelegramId(Db db, long channelId, long telegramId)
         {
             return (from post in db.TelegramPosts
                        where (post.TelegramId == telegramId && post.ChannelTelegramId == channelId)
                        select post)?.FirstOrDefault() ?? null;
         }
 
-        public static TelegramChannel AddChannelIfNeed(Db db, Channel channel)
+
+        /// <summary>
+        /// Добавить сущность TelegramChannel (проверка на наличие в базе)
+        /// </summary>
+        /// <param name="db"></param>
+        /// <param name="channel"></param>
+        /// <returns></returns>
+        public static TelegramChannel AddTelegramChannelIfNeed(Db db, Channel channel)
         {
-            TelegramChannel chan = GetChannelByTelegramId(db, channel.IdChannel);
+            TelegramChannel chan = GetTelegramChannelByTelegramId(db, channel.IdChannel);
 
             if (Equals(chan, null))
             {
-                return AddChannelToDb(db, channel);
+                return AddTelegramChannelToDb(db, channel);
             }
 
             return chan;
         }
 
-        public static TelegramChannel AddChannelToDb(Db db, Channel channel)
+        /// <summary>
+        /// Добавить сущность TelegramChannel без проверки на наличие
+        /// </summary>
+        /// <param name="db"></param>
+        /// <param name="channel"></param>
+        /// <returns></returns>
+        public static TelegramChannel AddTelegramChannelToDb(Db db, Channel channel)
         {
             TelegramChannel newChannel = new TelegramChannel()
             {
@@ -89,13 +130,53 @@ namespace Core.Source.Helpers
             return newChannel;
         }
 
-        public static TelegramChannel GetChannelByTelegramId(Db db, long telegramId)
+        /// <summary>
+        /// Получить сущность TelegramChannel По TelegramId
+        /// </summary>
+        /// <param name="db"></param>
+        /// <param name="telegramId"></param>
+        /// <returns></returns>
+        public static TelegramChannel GetTelegramChannelByTelegramId(Db db, long telegramId)
         {
             return (from c in db.TelegramChannels
                 where c.TelegramId == telegramId
                 select c).FirstOrDefault();
         }
 
+        /// <summary>
+        /// Добавить сущность StatisticsChannel в базу данных
+        /// </summary>
+        public static void AddStatisticsChannelToDb(Db db, Channel channelInfo)
+        {
+            StatisticsChannel chanStat = new StatisticsChannel()
+            {
+                TelegramId = channelInfo.IdChannel,
+                SubscribersCount = channelInfo.Subscribers ?? 0,
+                Username = channelInfo.ChannelName,
+            };
+
+            db.StatisticsChannels.Add(chanStat);
+            db.SaveChanges();
+        }
+
+        /// <summary>
+        /// Добавить сущность StatisticsPost в базу данных
+        /// </summary>
+        /// <param name="db"></param>
+        /// <param name="channel"></param>
+        /// <param name="post"></param>
+        public static void AddStatisticsPostToDb(Db db, TelegramChannel channel, TLMessage post)
+        {
+            StatisticsPost postStat = new StatisticsPost()
+            {
+                TelegramId = post.Id,
+                ChannelUsername = channel.Username,
+                ViewCount = post.Views ?? 0,
+                ChannelTelegramId = channel.TelegramId,
+            };
+            db.StatisticsPosts.Add(postStat);
+            db.SaveChanges();
+        }
 
     }
 }
