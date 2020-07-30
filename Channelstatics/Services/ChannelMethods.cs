@@ -106,7 +106,7 @@ namespace Channelstatics.Services
                         OffsetId = 0
                     });
                 }
-                catch (Exception)
+                catch (Exception e)
                 {
                     return posts;
                 }

@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Core.DataBase.Context;
+using Core.DataBase.Models;
 using Core.Source.Classes;
 using Core.Source.Helpers;
 
@@ -11,7 +13,7 @@ namespace Core.Source.ProcessClass
         List<string> AllCommans = new List<string>()
         {
             "hello",
-            "test",
+            "stat",
             "add_channel",
             "remove_channel",
         };
@@ -44,8 +46,8 @@ namespace Core.Source.ProcessClass
                 case "hello":
                     CommandHello(command);
                     break;
-                case "test":
-
+                case "stat":
+                    CommandShowStat(command);
                     break;
                 case "ect...":
 
@@ -63,5 +65,38 @@ namespace Core.Source.ProcessClass
             Debug.Log("Heello tooo!");
         }
 
+
+        /// <summary>
+        /// Обработка команды ShowStat
+        /// </summary>
+        /// <param name="command"></param>
+        private void CommandShowStat(Command command)
+        {
+            string channelName = command.GetParam("name");
+            if(string.IsNullOrWhiteSpace(channelName))
+            {
+                Debug.Error("Введите параметр [username=ChannelName]!");
+                return;
+            }
+
+            using (Db db = new Db(HelperDatabase.DB_OPTIONS))
+            {
+                TelegramChannel channel = DbMethods.GetChannelFromDb(db, channelName);
+                
+                if (channel == null)
+                {
+                    Debug.Error($"В базе данных нет канала [{channelName}]");
+                    return;
+                }
+
+
+                //Получить статистику по подписчикам
+                string subsStat = DbMethods.GetSubscribersStatistics(db, channel);
+                string postStat = DbMethods.GetViewsStatistics(db, channel);
+                Debug.Log($"\n{subsStat}\n\n{postStat}\n");
+
+
+            }
+        }
     }
 }

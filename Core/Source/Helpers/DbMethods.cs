@@ -11,7 +11,7 @@ using TeleSharp.TL;
 
 namespace Core.Source.Helpers
 {
-    public class DbMethods
+    public partial class DbMethods
     {
         /// <summary>
         /// Получить все каналы из таблицы TelegramChannels

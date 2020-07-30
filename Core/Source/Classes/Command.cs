@@ -62,7 +62,7 @@ namespace Core.Source.Classes
 
             foreach (Match match in res)
             {
-                command.AddParam(match.Groups["name"].Value, match.Groups["data"].Name);
+                command.AddParam(match.Groups["name"].Value, match.Groups["data"].Value);
             }
 
             return true;

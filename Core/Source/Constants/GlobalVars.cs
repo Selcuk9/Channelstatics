@@ -35,7 +35,7 @@ namespace Channelstatics
        /// <summary>
        /// Номер телефона клиента
        /// </summary>
-       private static string _phoneNumber = "+79888642460";
+       private static string _phoneNumber = "+79187525678";
        public static string PhoneNumber
        {
            get { return _phoneNumber; }

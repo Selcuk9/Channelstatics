@@ -41,12 +41,13 @@ namespace Core.Source.Logic
                     return;
                 }
 
-                Thread.Sleep(this.RequestsDelaySeconds);
-                
+                //Thread.Sleep(this.RequestsDelaySeconds);
+                Thread.Sleep(new Random(Convert.ToInt32(DateTime.Now.Ticks % 100000)).Next(10, 20) * 1000);
+
                 //Запускаем цикл по каналам
                 //Получить запросом канал Добавить в базу кол-во подписчиков канала на текущий час.
 
-                foreach(var channel in channels)
+                foreach (var channel in channels)
                 {
                     Debug.Log($"Берем статистику канала [{channel.Username}]");
 
@@ -72,7 +73,8 @@ namespace Core.Source.Logic
 
                     //Делаем задержку по времени, чтобы не банили запросы за превыщение лимита
                     //Берем данные по каналу, по его постам и делаем задержку.
-                    Thread.Sleep(this.RequestsDelaySeconds * 1000);
+                    //Thread.Sleep(this.RequestsDelaySeconds * 1000);
+                    Thread.Sleep(new Random(Convert.ToInt32(DateTime.Now.Ticks % 100000)).Next(10, 20)*1000);
                 }
 
                 Debug.Log("Сбор статистики завершен!");
